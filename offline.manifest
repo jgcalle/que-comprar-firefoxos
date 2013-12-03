@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# rev 1.0
+
+CACHE:
+index.html
+components/lungo/lungo.css
+components/lungo/lungo.icon.css
+components/lungo/lungo.icon.brand.css
+components/lungo/theme.lungo.css
+components/base.js
+components/quojs236/quo.js
+components/lungo/lungo.js
+js/comprarbd.js
+js/listasbd.js
+js/app.js
+img/linkedin.png
+img/twitter.png
+img/hold.png
+img/tap.png
+
+NETWORK:
+*

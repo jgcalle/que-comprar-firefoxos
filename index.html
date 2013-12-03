@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html manifest="/que_comprar/offline.manifest" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Que tengo que comprar hoy?</title>
+  <meta name="description" content="">
+  <meta name="author" content="Joaquín García de la Calle (@jgcalle)">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="components/lungo/theme.lungo.css">  
+</head>
+
+<body class="app">
+    
+    <!-- Inicio de app -->
+    
+    <!-- Inicio sección: Listado de listas -->
+    <section id="main" data-transition="slide">
+        <header data-title="Que tengo que comprar hoy?">
+            <nav class="right">
+
+            </nav>
+        </header>
+
+        <article id="main-elegir" class="active list indented scroll">
+            <div id="listadoDeListas"></div>
+            <nav>
+                <a href="#main-nueva-lista" class="button" data-icon="pencil" data-router="section">  Hacer la Lista de la Compra</a>
+            </nav>
+        </article>         
+
+        <footer>
+            <nav>
+                <a href="#main" data-icon="home" class="active" data-router="section"></a>
+                <a href="#app-ayuda" data-icon="help" data-router="section"></a>
+                <a href="#app-acerca" data-icon="info" data-router="section"></a>
+            </nav>
+        </footer>
+    </section>
+    <!-- Fin sección: Listado de listas -->
+
+    <!-- Inicio sección: Mostrar lista -->    
+    <section id="main-lista" data-transition="slide">
+        <header data-title="Lista de la compra">
+            <nav class="right">
+                <a href="#main" class="button" data-icon="left" data-router="section"> Volver</a>
+            </nav>  
+        </header>
+
+        <article id="main-article" class="active list scroll">
+            <ul>
+                <li class="theme" id="infoLista"></li>
+            </ul>
+            <div class="form">
+                <fieldset>  
+                    <div class="six columns">
+                        <input type="text" id="input-nuevo-articulo" placeholder="Introduce artículo ..." class="text" required />
+                    </div>    
+                    <div class="two columns">
+                        <select id="comboUds" class="custom-select">
+                            <option value="0" selected>#Uds</option>
+                        </select>
+                    </div>                        
+                    <div class="two columns">
+                        <button class="small" id="btn-nuevo-articulo">Añadir</button>
+                    </div>                         
+                </fieldset>
+            </div> 
+            <ul id="lista-compra">
+            </ul>   
+        </article>                            
+
+        <footer>
+            <nav>
+                <a href="#main" data-icon="home" data-router="section"></a>
+                <a href="#app-ayuda" data-icon="help" data-router="section"></a> 
+                <a href="#app-acerca" data-icon="info" data-router="section"></a>               
+            </nav>
+        </footer>
+    </section>    
+    <!-- Fin sección: Mostrar lista -->        
+
+    <!-- Inicio sección: Nueva lista -->    
+    <section id="main-nueva-lista" data-transition="slide">
+        <header data-title="Lista de la compra">
+        </header>
+
+        <article id="form-normal" class="active scroll">
+            <div class="form">          
+                <fieldset>
+                    <button class="button cancel small" id="btn-cancelar-lista">Cancelar</button>
+                    <button class="button accept small" id="btn-nueva-lista">Añadir artículos</button>
+                </fieldset>
+                <fieldset>
+                    <label>Donde ir?</label>
+                    <input type="text" id="txtdondeir" class="text error">
+                </fieldset>
+                <fieldset>
+                    <label>Cuando?</label>
+                    <input type="date" class="error" id="txtcuandoir">
+                </fieldset>
+                <fieldset>
+                    <label>Notas</label>
+                    <br>
+                    <textarea id="txtnotas" class="error"></textarea>
+                </fieldset>              
+            </div>
+        </article>                   
+
+        <footer>               
+            <nav>
+                <a href="#main" data-icon="home" data-router="section"></a>
+                <a href="#app-ayuda" data-icon="help" data-router="section"></a>                
+                <a href="#app-acerca" data-icon="info" data-router="section"></a>                
+            </nav>
+        </footer>
+    </section>    
+    <!-- Fin sección: Nueva lista -->            
+
+    <!-- Inicio sección: Ayuda -->    
+    <section id="app-ayuda" data-transition="slide">
+        <header data-title="Ayuda">
+            <nav class="right">
+                <a href="#main" class="button" data-icon="left" data-router="section"> Volver</a>
+            </nav>  
+        </header>
+
+        <article id="ayuda" class="active list scroll indented">
+            <ul>
+                <li class="theme">
+                    <strong>Usa tu dedo ...</strong>
+                </li>
+                <li class="light">
+                    <strong>Lista de la compra</strong>
+                </li>             
+                <li data-image="img/hold.png" class="thumb">
+                    <strong>Mantén pulsado</strong><br>
+                    Para eliminar una lista de la compra
+                </li>   
+
+                <li class="light">
+                    <strong>Artículos de una lista</strong>
+                </li>            
+                <li data-image="img/tap.png" class="thumb">
+                    <strong>Pulsa una vez</strong><br>
+                    Para tachar un artículo que has comprado
+                </li>
+                <li data-image="img/tap.png" class="thumb">
+                    <strong>Pulsa otra vez</strong><br>
+                    Para deshacer el tachado de un artículo
+                </li>            
+                <li data-image="img/hold.png" class="thumb">
+                    <strong>Mantén pulsado</strong><br>
+                    Para eliminar un artículo de tu lista
+                </li>   
+                <li><br></li>
+            </ul>
+            
+        </article>                
+
+        <footer>
+            <nav>
+                <a href="#main" data-icon="home" data-router="section"></a>
+                <a href="#app-ayuda" data-icon="help" class="active" data-router="section"></a>                
+                <a href="#app-acerca" data-icon="info" data-router="section"></a>                
+            </nav>
+        </footer>
+    </section>    
+    <!-- Fin sección: Ayuda -->       
+
+    <!-- Inicio sección: Config -->    
+    <section id="app-acerca" data-transition="slide">
+        <header data-title="Acerca de">
+            <nav class="right">
+                <a href="#main" class="button" data-icon="left" data-router="section"> Volver</a>
+            </nav>  
+        </header>
+
+        <article id="acerca-article" class="active list scroll indented">
+            <ul>
+                <li class="theme" data-icon="info">
+                    <strong>Que tengo que comprar hoy?</strong><br>
+                    <strong>version 1.0</strong>
+                </li>
+                <li class="light" data-icon="user">
+                    Autor<br>
+                    <address class="author"><strong>Joaquín García de la Calle</strong></address>
+                </li>                              
+                <li class="light" data-icon="mail">
+                    Email<br>
+                    <address><a href="mailto:jgcalle@yahoo.com">jgcalle@yahoo.com</a></address>
+                </li>                                                             
+                <li data-image="img/linkedin.png" >
+                    LinkedIn
+                    <address><a href="http://es.linkedin.com/in/jgcalle" target="_blank" title="Joaquín García en Linkedin">es.linkedin.com/in/jgcalle</a></address>
+                </li>                   
+                <li data-image="img/twitter.png" >
+                    Twitter
+                    <address><a href="https://twitter.com/jgcalle" target="_blank" title="Joaquín García en Twitter">@jgcalle</a></address>
+                </li>     
+            </ul>
+        </article>                
+
+        <footer>
+            <nav>
+                <a href="#main" data-icon="home" data-router="section"></a>
+                <a href="#app-ayuda" data-icon="help" data-router="section"></a>                
+                <a href="#app-acerca" data-icon="info" class="active" data-router="section"></a>                
+            </nav>
+        </footer>
+    </section>    
+    <!-- Fin sección: Config -->    
+    
+    <!-- Fin de app -->
+  
+    <!-- Webapp libraries -->
+    <script src="components/base.js"></script>
+    <!-- Lungo - Dependencies -->
+    <script src="components/quojs236/quo.js"></script>
+    <script src="components/lungo/lungo.js"></script>
+    <!-- Lungo - Sandbox App -->
+    <script>
+        Lungo.init({
+            name: 'Que tengo que comprar hoy?'
+        });
+    </script>
+    <!-- Lógica aplicación -->
+    <script src="js/comprarbd.js"></script>
+    <script src="js/listasbd.js"></script>
+    <script src="js/app.js"></script>     
+  
+</body>
+</html>

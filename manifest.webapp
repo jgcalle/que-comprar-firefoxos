@@ -1,0 +1,16 @@
+{
+  "name": "QueComprar?",
+  "description": "Qué tengo que comprar hoy? Crea tus listas de la comprar para recordar siempre lo que tienes que comprar.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png",
+    "120": "/img/icon-120.png",
+    "90": "/img/icon-90.png",
+    "60": "/img/icon-60.png"
+  },
+  "developer": {
+    "name": "Joaquín García de la Calle",
+    "url": "http://es.linkedin.com/in/jgcalle"
+  },
+  "default_locale": "es"
+}
